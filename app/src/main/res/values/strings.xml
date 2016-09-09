@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Local Dash</string>
+    <string name="action_settings">Settings</string>
+    <string name="nsd_title_with_count">NSD (%s)</string>
+    <string name="wd_title_with_count">Wifi-Direct(%s)</string>
+    <string name="p2psd_title_with_count">P2P Service Discovery(%s)</string>
+    <string name="enter_chat_hint">Type here...</string>
+    <string name="chat_request_title">Chat Request from %s</string>
+    <string name="enter_name_hint">Enter your name</string>
+    <string name="txt_nsd">Network service discovery</string>
+    <string name="txt_wifi_direct">Wi-Fi Direct</string>
+    <string name="txt_wifi_sd">Wi-Fi Direct service discovery</string>
+    <string name="wifi_not_connected_error">It seems wifi is not connected. Please connected with a wifi network to continue NSD</string>
+    <string name="wifi_not_enabled_error">Please enable Wi-Fi to continue</string>
+</resources>

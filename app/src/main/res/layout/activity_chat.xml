@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.drulabs.localdash.ChatActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/et_chat_box"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/et_chat_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_toLeftOf="@+id/fab_send_chat"
+        android:hint="@string/enter_chat_hint"
+        android:maxLines="2"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_send_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:onClick="SendChatInfo"
+        android:src="@mipmap/ic_send_chat"
+        android:tint="@color/colorPrimaryDark"/>
+
+</RelativeLayout>
