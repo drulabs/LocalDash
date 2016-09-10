@@ -54,13 +54,13 @@ public class LocalDashNSD extends AppCompatActivity implements PeerListFragment.
         setSupportActionBar(toolbar);
 
         initialize();
-//        mNsdHelper.discoverServices();
+        mNsdHelper = new NsdHelper(this);
+        mNsdHelper.initializeNsd();
+        mNsdHelper.discoverServices();
     }
 
     @Override
     protected void onStart() {
-        mNsdHelper = new NsdHelper(this);
-        mNsdHelper.initializeNsd();
         super.onStart();
     }
 
@@ -132,9 +132,6 @@ public class LocalDashNSD extends AppCompatActivity implements PeerListFragment.
                 filter);
         LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(DataHandler
                 .DEVICE_LIST_CHANGED));
-        if (mNsdHelper != null) {
-            mNsdHelper.discoverServices();
-        }
 
 //        appController.startConnectionListener();
 //        mNsdHelper.registerService(ConnectionUtils.getPort(LocalDashNSD.this));
@@ -145,13 +142,14 @@ public class LocalDashNSD extends AppCompatActivity implements PeerListFragment.
         //mNsdHelper.tearDown();
         Utility.clearPreferences(LocalDashNSD.this);
         appController.stopConnectionListener();
+        mNsdHelper.tearDown();
+        mNsdHelper = null;
+        DBAdapter.getInstance(LocalDashNSD.this).clearDatabase();
         super.onDestroy();
     }
 
     @Override
     protected void onStop() {
-        mNsdHelper.tearDown();
-        mNsdHelper = null;
         Log.d("DXDX", Build.MANUFACTURER + ": local dash NSD Stopped");
         super.onStop();
     }

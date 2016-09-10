@@ -12,4 +12,6 @@
     <string name="txt_wifi_sd">Wi-Fi Direct service discovery</string>
     <string name="wifi_not_connected_error">It seems wifi is not connected. Please connected with a wifi network to continue NSD</string>
     <string name="wifi_not_enabled_error">Please enable Wi-Fi to continue</string>
+    <string name="port_info">Requests listening on %s</string>
+    <string name="port_info_hint">port information</string>
 </resources>

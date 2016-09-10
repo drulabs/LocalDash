@@ -183,7 +183,7 @@ public class LocalDashWiFiDirect extends AppCompatActivity implements PeerListFr
         appController.stopConnectionListener();
         Utility.clearPreferences(LocalDashWiFiDirect.this);
         Utility.deletePersistentGroups(wifiP2pManager, wifip2pChannel);
-
+        DBAdapter.getInstance(LocalDashWiFiDirect.this).clearDatabase();
         wifiP2pManager.removeGroup(wifip2pChannel, new WifiP2pManager.ActionListener() {
             @Override
             public void onSuccess() {

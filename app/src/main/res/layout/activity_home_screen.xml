@@ -60,10 +60,14 @@
         android:layout_marginTop="@dimen/margin_big"
         android:onClick="startWiFiDirectServiceDiscovery"
         android:text="@string/txt_wifi_sd"/>
+
     <TextView
         android:id="@+id/tv_port_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_below="@id/btn_home_wifisd"/>
+        android:layout_below="@id/btn_home_wifisd"
+        android:layout_marginTop="@dimen/margin_big"
+        android:gravity="center"
+        android:hint="@string/port_info_hint"
+        android:textSize="20sp"/>
 </RelativeLayout>
