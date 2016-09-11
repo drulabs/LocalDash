@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class DBAdapter {
 
+    //TODO Cursors have not been closed. Please close it.
+
     private static DBAdapter singleInstance;
     private static Object lockObject = new Object();
     private Context context;
