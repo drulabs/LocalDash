@@ -10,6 +10,7 @@ Data sharing code is kept same and a single fragment is used for displaying devi
 Wi-Fi direct service discovery is a little flaky, if you find a solution, do create a pull request.
 
 the service type used in this codebase, is not in accordance with IANA. Review before using this code for production or commercial usage. 
+When you are in NSD or Wi-Fi direct screen click on the floating action button to start registration or discovery respectively.
 
 happy coding!!!
 
